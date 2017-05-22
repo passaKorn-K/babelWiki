@@ -8,7 +8,9 @@ module.exports = {
     // ตรงจุดนี้สำคัญครับ! จุดเริ่มต้นของโปรแกรมเราคือ index.js Dashboard.js หรือ
     // Article.js จะเข้าถึงได้ก็ต้องผ่านไฟล์นี้ เราจึงบอกว่า index.js เป็น "entry"
     // หรือทางเข้าถึงของโมดูลอื่น
-    entry: './ui/index.js',
+    entry: [
+        './ui/index.js', './ui/theme/elements.scss'
+    ],
     output: {
         publicPath: '/static/',
         path: path.join(__dirname, 'static'),
