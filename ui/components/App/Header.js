@@ -1,5 +1,6 @@
 // ui/components/App/Header.js
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import styles from './Header.scss'
 
 export default class Header extends Component {
@@ -7,14 +8,18 @@ export default class Header extends Component {
     return (
       <header className={styles['header']}>
         <nav>
-          <a href='/' className={styles['brand']}>
+          <Link
+            to= {{pathname: '/'}}
+            className= {styles['brand']}>
             Babel Coder Wiki!
-          </a>
+          </Link>
           <ul className={styles['menu']}>
             <li className={styles['menu__item']}>
-              <a href='/pages' className={styles['menu__link']}>
+              <Link
+                to= {{pathname: '/pages'}}
+                className={styles['menu__link']}>
                 All Pages
-              </a>
+              </Link>
             </li>
             <li className={styles['menu__item']}>
               <a
