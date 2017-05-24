@@ -26,13 +26,18 @@ class Pages extends Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>1</th>
-            <td>Title Page#1</td>
-            <td>
-              <a href='javascript:void(0)'>Show</a>
-            </td>
-          </tr>
+          {
+            this.state.pages.map((page) => (
+              <tr key={page.id}>
+                <th>{page.id}</th>
+                <td>{page.title}</td>
+                <td>
+                  <a href='javascript:void(0)'>Show</a>
+                </td>
+              </tr>
+            ))
+          }
+         
         </tbody>
       </table>
     )
